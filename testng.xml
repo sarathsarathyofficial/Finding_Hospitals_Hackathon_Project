@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Finding Hospitals Automation">
+    <test name="Finding Hospitals Test Cases">
+        <classes>
+            <class name="org.practo.com.tests.TC001_Validate_HomePage"/>
+            <class name="org.practo.com.tests.TC003_Print_Top_Cities"/>
+        </classes>
+
+    </test>
+
+</suite>

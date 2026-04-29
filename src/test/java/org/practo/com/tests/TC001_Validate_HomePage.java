@@ -4,16 +4,13 @@ import org.practo.com.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC001_Home_page_Opened extends baseclass {
+public class TC001_Validate_HomePage extends baseclass {
 
     @Test
-    public void validateCreateAccountPageOpened() {
+    public void validateHomePage() {
 
         HomePage homePage = new HomePage(driver);
 
-        Assert.assertTrue(
-                homePage.isHomePageOpened(),
-                "Practo.com page NOT opened"
-        );
+        Assert.assertTrue(homePage.isHomePageOpened(),"Practo.com page NOT opened");
     }
 }
