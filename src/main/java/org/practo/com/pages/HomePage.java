@@ -19,7 +19,7 @@ public class HomePage {
     }
 
     public boolean isHomePageOpened() {
-        if (practoPro.isDisplayed()){
+        if(practoPro.isDisplayed()){
             return true;
         }
         return false;
