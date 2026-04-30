@@ -9,6 +9,8 @@ public class TC001_Validate_HomePage extends baseclass {
     @Test
     public void validateHomePage() {
 
+        //Nit
+
         HomePage homePage = new HomePage(driver);
 
         Assert.assertTrue(homePage.isHomePageOpened(),"Practo.com page NOT opened");
