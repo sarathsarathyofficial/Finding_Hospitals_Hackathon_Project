@@ -1,4 +1,4 @@
-package org.practo.com.pages;
+package org.practo.com.pages.Sarath;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +12,8 @@ public class DiagnosisPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    @FindBy(css = "ul li div.o-f-color--primary") List<WebElement> TopCities;
+    @FindBy(css = "ul li div.o-f-color--primary")
+    List<WebElement> TopCities;
     public void printTopCities() {
         for (WebElement element : TopCities) {
             System.out.println(element.getText());

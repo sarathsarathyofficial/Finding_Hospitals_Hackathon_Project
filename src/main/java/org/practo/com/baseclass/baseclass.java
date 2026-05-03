@@ -4,12 +4,13 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.practo.com.utility.ScreenshotUtil;
 import org.practo.com.utility.Utility;
-//import org.miniproject.utility.ConfigReader;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.JavascriptExecutor;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeMethod;
@@ -20,23 +21,26 @@ import org.testng.ITestResult;
 import java.time.Duration;
 public class baseclass {
     public WebDriver driver;
-
+    public JavascriptExecutor js;
     @BeforeMethod
     public void BrowserSetup() throws Exception {
         if (Utility.fetchPropertyValue("browser").equals("chrome")) {
 //            ChromeOptions options = new ChromeOptions();
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+            js = (JavascriptExecutor) driver;
             driver.manage().window().maximize();
         } else if (Utility.fetchPropertyValue("browser").equals("edge")) {
 //            EdgeOptions edgeOptions = new EdgeOptions();
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
+            js = (JavascriptExecutor) driver;
             driver.manage().window().maximize();
         } else if (Utility.fetchPropertyValue("browser").equals("firefox")) {
             FirefoxOptions firefoxOptions = new FirefoxOptions();
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+            js = (JavascriptExecutor) driver;
             driver.manage().window().maximize();
         }
         driver.get(Utility.fetchPropertyValue("baseUrl").toString());

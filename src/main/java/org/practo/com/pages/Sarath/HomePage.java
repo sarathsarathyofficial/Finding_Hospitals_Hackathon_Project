@@ -1,4 +1,4 @@
-package org.practo.com.pages;
+package org.practo.com.pages.Sarath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,9 +24,11 @@ public class HomePage {
         }
         return false;
     }
+
     public void clickLabTests(){
         labTests.click();
     }
+
     public void clickSearchForHospitals(){
         searchForHospitals.click();
     }

@@ -3,9 +3,9 @@
 <suite name="Finding Hospitals Automation">
     <test name="Finding Hospitals Test Cases">
         <classes>
-<!--            <class name="org.practo.com.tests.TC001_Validate_HomePage"/>-->
-            <class name="org.practo.com.tests.TC002_Search_Hospitals"/>
-<!--            <class name="org.practo.com.tests.TC003_Print_Top_Cities"/>-->
+<!--            <class name="org.practo.com.tests.Sarath.TC001_Validate_HomePage"/>-->
+            <class name="org.practo.com.tests.Sarath.TC002_Validate_Search_Hospitals_In_Bangalore"/>
+<!--            <class name="org.practo.com.tests.Sarath.TC004_Print_Top_Cities"/>-->
         </classes>
 
     </test>
